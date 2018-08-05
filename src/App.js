@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, {Component} from 'react';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   render() {
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header branding="Contact Manager"/>
+        <div className="container">
+          <Contact name="John Doe" email="jdoe@gmail.com" phone="555-555-5555"/>
+          <Contact name="Karen Doe" email="kdoe@gmail.com" phone="555-777-5555"/>
+        </div>
       </div>
     );
   }
